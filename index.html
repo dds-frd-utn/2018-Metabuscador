@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Marnu - tu buscador</title>
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    </head>
+
+<body>
+ 
+    <div class="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="primary-nav-button" type="button">Menu</button>
+                        <a href="index.html"><div class="logo">
+                            <img src="img/logo.png" alt="Venue Logo">
+                        </div></a>
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="dropdown menu">
+                                <li><a href="#">Más buscado</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Más buscado 1</a> 
+                                        </li>
+                                        <li><a href="#">Más buscado 2</a> 
+                                        </li>
+                                        <li><a href="#">Más buscado 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Registrarse</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">Contactanos</a></li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+      
+
+    
+    <section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="banner-caption">
+                        <h2 >El mejor buscador para vos</h2>
+                        <span >Encontrá el comercio o servicio que estás buscando</span>
+                    </div>
+                    <div class="submit-form">
+                        <form id="form-submit" action="" method="get">
+                            <div class="row">
+                                
+                                <div class="col-sm-3 second-item">
+                                    <fieldset>
+                                        <select name='category' onchange='this.form.()'>
+                                            <option value="">Seleccioná tu localidad...</option>
+                                            <option value="Baradero">Baradero</option>
+                                            <option value="Campana">Campana</option>
+                                            <option value="Escobar">Escobar</option>
+                                            <option value="Maschwitz">Maschwitz</option>
+                                            <option value="Pilar">Pilar</option>
+                                            <option value="San Pedro">San Pedro</option>
+                                            <option value="Zarate">Zárate</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-sm-6 third-item">
+                                    <fieldset>
+                                        <input class="test" type="text" class="form-control" placeholder="Qué estás buscando?.." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-3">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Buscar ahora</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contenido"></div>
+
+    <section class="popular-places" id="popular">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Categorías</h2>
+                    </div>
+                </div> 
+            </div> 
+            <div class="owl-carousel owl-theme">
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/gastronomia.jpg" alt="">
+                        <!--<div class="text-content">
+                            <h4>Gastronomía</h4>  
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Gastronomía</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Restaurantes</a></li>
+                                        <li><a href="#">Panaderías</a></li>
+                                        <li><a href="#">Carnicerías</a</li>
+                                        <li><a href="#">Verdulerías</a></li>
+                                        <li><a href="#">Heladerías</a></li>
+                                        <li><a href="#">Delivery</a></li>
+                                        <li><a href="#">Dietéticas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/tiempolibre.jpg" alt="">
+                        <!--<div class="text-content">
+                            <h4>Tiempo libre</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Tiempo libre</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Gimnasios</a> 
+                                        </li>
+                                        <li><a href="#">Eventos</a> 
+                                        </li>
+                                        <li><a href="#">Boliches</a>
+                                        </li>
+                                        <li><a href="#">Bares</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/indumentaria.jpg" alt="">
+                        <!--<div class="text-content">
+                            <h4>Indumentaria</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Indumentaria</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Indumentaria Deportiva</a> 
+                                        </li>
+                                        <li><a href="#">Modistas</a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/estetica.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Estética</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Estética</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Peluquerías</a> 
+                                        </li>
+                                        <li><a href="#">Spa</a> 
+                                        </li>
+                                        <li><a href="#">Nutricionistas</a>
+                                        </li>
+                                        <li><a href="#">Masajes</a>
+                                        </li>
+                                        <li><a href="#">Depilación</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/vehiculos.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Vehiculos</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Vehículos</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Concesionarias</a> 
+                                        </li>
+                                        <li><a href="#">Talleres mecánicos</a> 
+                                        </li>
+                                        <li><a href="#">Estacionamientos</a>
+                                        </li>
+                                        <li><a href="#">Gomerías</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/inmuebles.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Inmuebles</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Inmuebles</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Inmobiliarias</a> 
+                                        </li>
+                                        <li><a href="#">Terrenos</a> 
+                                        </li>
+                                        <li><a href="#">Alquileres</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/educacion.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Educación</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Educación</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Escuelas</a> 
+                                        </li>
+                                        <li><a href="#">Universidades</a> 
+                                        </li>
+                                        <li><a href="#">Jardines</a>
+                                        </li>
+                                        <li><a href="#">Cursos</a>
+                                        </li>
+                                        <li><a href="#">Talleres</a>
+                                        </li>
+                                        <li><a href="#">Idiomas</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/profesionales.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Profesionales</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Profesionales</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Escribanos</a> 
+                                        </li>
+                                        <li><a href="#">Abogados</a> 
+                                        </li>
+                                        <li><a href="#">Albañiles</a>
+                                        </li>
+                                        <li><a href="#">Electricistas</a>
+                                        </li>
+                                        <li><a href="#">Contadores</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/transporte.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Transporte</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Transporte</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Remises</a> 
+                                        </li>
+                                        <li><a href="#">Mensajerías</a> 
+                                        </li>
+                                        <li><a href="#">Fletes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/alojamiento.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Alojamiento</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Alojamiento</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Hoteles</a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/cultura.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Cultura</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Cultura</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Museos</a> 
+                                        </li>
+                                        <li><a href="#">Teatros</a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/salud.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Salud</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Salud</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Hospitales</a> 
+                                        </li>
+                                        <li><a href="#">Clínicas</a> 
+                                        </li>
+                                        <li><a href="#">Consultorios</a>
+                                        </li>
+                                        <li><a href="#">Centros Médicos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/animales.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Animales</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Animales</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Veterinarias</a> 
+                                        </li>
+                                        <li><a href="#">Forrajes</a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/tecnologia.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Tecnología</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Tecnología</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Computación</a> 
+                                        </li>
+                                        <li><a href="#">Telefonía celular</a> 
+                                        </li>
+                                        <li><a href="#">Video Juegos</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+                <div class="item popular-item">
+                    <div class="thumb">
+                        <img src="img/otroscomercios.jpg" alt="">
+                        <!-- <div class="text-content">
+                            <h4>Otros comercios</h4>
+                        </div> -->
+                        <nav id="primary-nav" class="dropdown cf">
+                            <ul class="menu">
+                                <li><a href="#">Otros</a></li>
+                                <li><a href="#"><i class="fa fa-plus"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Kioscos</a> 
+                                        </li>
+                                        <li><a href="#">Mayoristas</a> 
+                                        </li>
+                                        <li><a href="#">Jugueterías</a>
+                                        </li>
+                                        <li><a href="#">Estaciones de Servicio</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><!-- / #primary-nav -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="queries">
+        <h3>Comercios y servicios más buscados</h3>
+    </div>
+
+
+    <section class="featured-places" id="blog">
+        <div class="container">
+           <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211116.7233294277!2d-59.09607631852324!3d-34.23070830131898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb723060430bad%3A0xaa31c9f685c849bf!2sCampana%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1542695152388" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-veno">
+                        <div class="logo">
+                            <img src="img/footer_logo.png" alt="Venue Logo">
+                        </div>
+                        <p>Trabajo práctico final de materia Diseño de Sistemas</p>
+                        <p>3° año de Ingeniería en Sistemas de Información de la Facultad Regional Delta.</p>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-rss"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="useful-links">
+                        <div class="footer-heading">
+                            <h4>Links útiles</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    
+                                    <li><a href="#"><i class="fa fa-stop"></i>Registrarse</a></li>
+                                    <li><a href="#"><i class="fa fa-stop"></i>Login</a></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-stop"></i>¿Cómo funciona?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-info">
+                        <div class="footer-heading">
+                            <h4>Información de contacto</h4>
+                        </div>
+                        <p>Alumnos de la Facultad Regional Delta</p>
+                        <ul>
+                            <li><span>Telefono:</span><a href="#">03489-050-550</a></li>
+                            <li><span>Email:</span><a href="#">marnu@company.ar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <p>Copyright &copy; 2018 Diseño de Sistemas FRD
+    
+    	- Design: <a >Pérez Leonardi Mariángeles, Ulmete Nicolás</a></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Renderizar lo más buscado -->
+    <script src="https://cse.google.com/query_renderer.js"></script>
+    <script src="https://cse.google.com/api/000643035463744350250/cse/tzlvymd5-ao/queries/js?view=overall&callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+
+    <script>
+        let nombre;
+        let direccion;
+        let localidad;
+        let telefono;
+        let coordenadas;
+        let busqueda;
+        let texto;
+        let inputBusqueda = document.querySelector('.test');
+        let formBusqueda = document.querySelector('#form-submit');
+        let contenido = document.querySelector('#contenido');
+        let url;
+        let item;
+
+        // Manipulamos los datos obtenidos de la búsqueda
+        function hndlr(response) {
+            // let respuesta = response.items;
+            // console.log(respuesta);
+
+            contenido.innerHTML = ""; // remover el contenido de la búsqueda anterior
+
+            for (var i = 0; i < response.items.length; i++) {
+                item = response.items[i];
+                nombre = item.pagemap.localbusiness[0].name; // obtener nombre
+                direccion = item.pagemap.postaladdress[0].streetaddress; // obtener dirección
+                localidad = item.pagemap.postaladdress[0].addresslocality; // obtener localidad
+                telefono = item.pagemap.localbusiness[0].telephone; // obtener teléfono
+                coordenadas = item.pagemap.geocoordinates; // obtener coordenadas
+
+                // Imprimir datos de prueba
+                console.log("Teléfono de item " + i + ": " + telefono);
+                if (Array.isArray(coordenadas) && coordenadas.length) { // hay algunos negocios que no tienen coordenadas cargadas
+                    console.log("Item " + i + " | Latitud: " + coordenadas[0].latitude + " | Longitud: " + coordenadas[0].longitude);
+                }
+
+                // Mostrar los resultados obtenidos
+                contenido.innerHTML += "<br>" + nombre + " | " + direccion + " | " + telefono; // mostrar resultados obtenidos
+            }
+        }
+
+        // Cambiar el parámetro de la búsqueda
+        function urlBusqueda(param) {
+            // api test 1
+            // url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyB6EMZSCgod97TDOAGVbQDqBpykAPIF3g0&cx=000643035463744350250:tzlvymd5-ao&q=" + param + "&callback=hndlr";
+
+            // api test 2
+            url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBbslC9fu6e9jxX2VPBt0ml9SMY72VIHEY&cx=013257323115518149585:yxt7fbdfogy&q=" + param + "&callback=hndlr";
+        }
+
+        // Modifica los espacios de un string y los reemplaza por un "+" para poder hacer la consulta correctamente
+        function removerEspacios(str) {
+            return str = str.replace(/\s+/g, '+');
+        }
+
+        // Llamada AJAX (GET) para obtener los datos buscados
+        function getDatos(url) {
+            $.getScript(url, function(data, textStatus) {
+                alert("Exito 2.0");
+            });
+        }
+
+        // Guardar en la variable busqueda el texto ingresado en el buscador
+        $(".test").change(function(e) {
+            e.preventDefault();
+            busqueda = inputBusqueda.value;
+            urlBusqueda(busqueda);
+        });
+
+        // Formulario de búsqueda
+        $("#form-submit").submit(function(e) {
+            e.preventDefault(); // evitar refresh de la página al hacer submit
+            getDatos(url);
+        });
+
+        // Insertar el parámetro correspondiente a la subcategoría en la url y hacer la búsqueda
+        $(".sub-menu > li > a").click(function(e) {
+            texto = $(e.target).text();
+            console.log(texto);
+            busqueda = removerEspacios(texto);
+            urlBusqueda(busqueda);
+            getDatos(url);
+        });
+
+        // Realizar búsqueda al hacer click en alguno de los links "más buscados"
+        $("#queries > a").click(function(e) {
+            e.preventDefault();
+            texto = $(e.target).text();
+            busqueda = removerEspacios(texto);
+            urlBusqueda(busqueda);
+            getDatos(url);
+        });
+
+    </script>
+</body>
+</html>
