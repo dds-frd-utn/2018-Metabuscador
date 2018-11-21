@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/owl-carousel.css">
         <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/templatemo-style.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -43,7 +44,23 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Registrarse</a></li>
-                                <li><a href="#">Login</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                                <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="loginmodal-container">
+                                             <h1 style="color:white;">Ingresa a tu cuenta</h1><br>
+                                                <form>
+                                                    <input type="text" name="user" placeholder="Cuenta">
+                                                    <input type="password" name="pass" placeholder="Contraseña">
+                                                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                                                </form>
+                                                <div class="login-help">
+                                                    <p></p>
+                                                    <a style="color:#4a93e5;" href="#">Registrarse</a> -  <a style="color:#4a93e5;" href="#">Olvide mi contraseña</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li><a href="#">Contactanos</a></li>
                             </ul>
                         </nav>
@@ -578,6 +595,8 @@
     <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- Renderizar lo más buscado -->
     <script src="https://cse.google.com/query_renderer.js"></script>
