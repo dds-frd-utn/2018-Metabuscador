@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Annotations start="0" num="1" total="1">
-  <Annotation about="www.paginasamarillas.com.ar/*campana" timestamp="0x00057b19db8ac3e1" href="CiR3d3cucGFnaW5hc2FtYXJpbGxhcy5jb20uYXIvKmNhbXBhbmEQ4Yer3J3j3gI">
-    <Label name="_cse_yxt7fbdfogy"/>
+<Annotations start="0" num="3" total="3">
+  <Annotation about="www.paginasamarillas.com.ar/*campana*buenos*aires" timestamp="0x00057b3133877e4a" href="CjF3d3cucGFnaW5hc2FtYXJpbGxhcy5jb20uYXIvKmNhbXBhbmEqYnVlbm9zKmFpcmVzEMr8nZyT5t4C">
+    <Label name="_cse_tzlvymd5-ao"/>
+    <AdditionalData attribute="original_url" value="www.paginasamarillas.com.ar/*campana*buenos*aires"/>
+  </Annotation>
+  <Annotation about="www.paginasamarillas.com.ar/*campana" timestamp="0x00057b31336555ab" href="CiR3d3cucGFnaW5hc2FtYXJpbGxhcy5jb20uYXIvKmNhbXBhbmEQq6uVm5Pm3gI">
+    <Label name="_cse_tzlvymd5-ao"/>
     <AdditionalData attribute="original_url" value="www.paginasamarillas.com.ar/*campana"/>
+  </Annotation>
+  <Annotation about="www.paginasamarillas.com.ar/*" timestamp="0x00057b31333148e2" href="Ch13d3cucGFnaW5hc2FtYXJpbGxhcy5jb20uYXIvKhDikcWZk-beAg">
+    <Label name="_cse_tzlvymd5-ao"/>
+    <AdditionalData attribute="original_url" value="www.paginasamarillas.com.ar/*"/>
   </Annotation>
 </Annotations>

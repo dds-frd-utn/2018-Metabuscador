@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CustomSearchEngine id="yxt7fbdfogy"
-                    creator="013257323115518149585"
-                    keywords="campana;03489;3489"
-                    language="es"
-                    encoding="UTF-8"
-                    autocompletions="true">
+<CustomSearchEngine id="tzlvymd5-ao" creator="000643035463744350250" keywords="campana 03489 3489 (03489)" language="es" encoding="UTF-8" autocompletions="true">
   <Title>Paginasamarillas.com.ar</Title>
   <Context>
     <BackgroundLabels>
-      <Label name="_cse_yxt7fbdfogy" mode="FILTER"/>
-      <Label name="_cse_exclude_yxt7fbdfogy" mode="ELIMINATE"/>
+      <Label name="_cse_tzlvymd5-ao" mode="FILTER"/>
+      <Label name="_cse_exclude_tzlvymd5-ao" mode="ELIMINATE"/>
     </BackgroundLabels>
   </Context>
   <LookAndFeel element_layout="8" theme="7" custom_theme="true" url_length="full" element_branding="show" enable_cse_thumbnail="true" promotion_url_length="full" font="2">

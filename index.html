@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Marnu - tu buscador</title>
+        <title>Marnu - Tu Buscador</title>
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,10 +15,10 @@
         <link rel="stylesheet" href="css/owl-carousel.css">
         <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/templatemo-style.css">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -38,12 +38,12 @@
                         </div></a>
                         <nav id="primary-nav" class="dropdown cf">
                             <ul class="dropdown menu">
-                                <li><a href="#">Más buscado</a>
+                                <!-- <li><a href="#">Más buscado</a>
                                     <ul class="sub-menu">
                                         <li><a href="#">Más buscado 1</a></li>
                                         <li><a href="#">Más buscado 2</a></li>
                                         <li><a href="#">Más buscado 3</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <li><a class="scrollTo" data-scrollTo="contact" href="#">Contactanos</a></li>
                                 <li><a href="#" data-toggle="modal" data-target="#login-modall">Registrarse</a></li>
@@ -155,7 +155,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Buscar ahora</button>
+                                        <button type="submit" class="btn">Buscar ahora</button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -166,7 +166,48 @@
         </div>
     </section>
 
-    <div id="contenido"></div>
+    <!-- Resultados de la búsqueda -->
+    <div id="contenido">
+        <!-- <a href="#" class="testlink" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="testname1" data-dir="testdir1" data-tel="testtel1" data-lat="-34.1687" data-lng="-58.9591">Test Link</a>
+        <a href="#" class="testlink" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="testname2" data-dir="testdir2" data-tel="testtel2" data-lat="" data-lng="">Test Link 2</a>
+        <a href="#" class="testlink" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="testname3" data-dir="testdir3" data-tel="testtel3" data-lat="" data-lng="">Test Link 3</a> -->
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row">
+                        <div id="info-container">
+                            <div>
+                                <div>
+                                    <span style="color:#333; font-weight:bold">Dirección: </span>
+                                    <span id="direccion" style="color:#333"></span>
+                                </div>
+                                <div>
+                                    <span style="color:#333; font-weight:bold">Teléfono: </span>
+                                    <span id="telefono" style="color:#333"></span>
+                                </div>
+                            </div>
+        
+                            <div id="map-container">
+                                <div id="map" style="border:1px solid red">Test</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
 
     <section class="popular-places" id="popular">
         <div class="container-fluid">
@@ -494,21 +535,20 @@
 
     <section class="featured-places" id="blog">
         <div class="container">
-            <div class="row" id="queries">
-                <div class="section-heading">
-                    <h2>Comercios y servicios más buscados</h2>
-                </div>
-            </div> 
+            <div class="section-heading">
+                <h2>Comercios y servicios más buscados</h2>
+            </div>
+            <div class="row" id="queries"></div> 
         </div>
     </section>
     
-    <section class="popular-places" id="popular">
+    <!-- <section class="popular-places" id="popular">
         <div class="container">
            <div id="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211116.7233294277!2d-59.09607631852324!3d-34.23070830131898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb723060430bad%3A0xaa31c9f685c849bf!2sCampana%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1542695152388" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>  
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="contact" id="contact">
     <footer>
@@ -596,7 +636,7 @@
                                                     </div>
                                                     <div class="col-md-12">
                                                       <fieldset>
-                                                        <button type="submit" id="form-submit" class="btn">Enviar mensaje</button>
+                                                        <button type="submit" class="btn">Enviar mensaje</button>
                                                       </fieldset>
                                                     </div>
                                                 </div>
@@ -641,20 +681,26 @@
     <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script> -->
 
     <!-- Renderizar lo más buscado -->
     <script src="https://cse.google.com/query_renderer.js"></script>
     <script src="https://cse.google.com/api/000643035463744350250/cse/tzlvymd5-ao/queries/js?view=overall&callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
 
+    <!-- Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6EMZSCgod97TDOAGVbQDqBpykAPIF3g0&callback=initMap"></script>
+
     <script>
+        // Variables
         let nombre;
         let direccion;
         let localidad;
         let telefono;
         let coordenadas;
+        let latitud;
+        let longitud;
         let busqueda;
         let texto;
         let inputBusqueda = document.querySelector('.test');
@@ -662,15 +708,17 @@
         let contenido = document.querySelector('#contenido');
         let url;
         let item;
+        let link;
+        let marker;
 
         // Manipulamos los datos obtenidos de la búsqueda
         function hndlr(response) {
-            // let respuesta = response.items;
-            // console.log(respuesta);
+            $(contenido).html(""); // remover el contenido de la búsqueda anterior
+            $(contenido).html("<h2>Resultados de la búsqueda</h2>");
 
-            contenido.innerHTML = ""; // remover el contenido de la búsqueda anterior
-
+            // Guardar los datos de cada resultado en variables
             for (var i = 0; i < response.items.length; i++) {
+                console.log(response.items[i]);
                 item = response.items[i];
                 nombre = item.pagemap.localbusiness[0].name; // obtener nombre
                 direccion = item.pagemap.postaladdress[0].streetaddress; // obtener dirección
@@ -678,24 +726,31 @@
                 telefono = item.pagemap.localbusiness[0].telephone; // obtener teléfono
                 coordenadas = item.pagemap.geocoordinates; // obtener coordenadas
 
-                // Imprimir datos de prueba
-                console.log("Teléfono de item " + i + ": " + telefono);
-                if (Array.isArray(coordenadas) && coordenadas.length) { // hay algunos negocios que no tienen coordenadas cargadas
-                    console.log("Item " + i + " | Latitud: " + coordenadas[0].latitude + " | Longitud: " + coordenadas[0].longitude);
+                if (Array.isArray(coordenadas) && coordenadas.length) { // asegurarse de que el item tenga coordenadas
+                    latitud = coordenadas[0].latitude;
+                    longitud = coordenadas[0].longitude;
                 }
 
-                // Mostrar los resultados obtenidos
-                contenido.innerHTML += "<br>" + nombre + " | " + direccion + " | " + telefono; // mostrar resultados obtenidos
+                // Cada resultado es un link
+                link = `
+                    <a href="#" class="result" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="${nombre}" data-dir="${direccion}" data-tel="${telefono}" data-lat="${latitud}" data-lng="${longitud}">
+                        ${nombre}
+                    </a>
+                    </br>
+                `;
+
+                // Agregar al div de id="contenido" cada link
+                $(contenido).append(link);
             }
         }
 
         // Cambiar el parámetro de la búsqueda
         function urlBusqueda(param) {
             // api test 1
-            // url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyB6EMZSCgod97TDOAGVbQDqBpykAPIF3g0&cx=000643035463744350250:tzlvymd5-ao&q=" + param + "&callback=hndlr";
+            url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyB6EMZSCgod97TDOAGVbQDqBpykAPIF3g0&cx=000643035463744350250:tzlvymd5-ao&q=" + param + "&callback=hndlr";
 
             // api test 2
-            url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBbslC9fu6e9jxX2VPBt0ml9SMY72VIHEY&cx=013257323115518149585:yxt7fbdfogy&q=" + param + "&callback=hndlr";
+            // url = "https://www.googleapis.com/customsearch/v1?key=AIzaSyBbslC9fu6e9jxX2VPBt0ml9SMY72VIHEY&cx=013257323115518149585:yxt7fbdfogy&q=" + param + "&callback=hndlr";
         }
 
         // Modifica los espacios de un string y los reemplaza por un "+" para poder hacer la consulta correctamente
@@ -706,7 +761,7 @@
         // Llamada AJAX (GET) para obtener los datos buscados
         function getDatos(url) {
             $.getScript(url, function(data, textStatus) {
-                alert("Exito 2.0");
+                alert("Exito en la búsqueda");
             });
         }
 
@@ -740,6 +795,46 @@
             urlBusqueda(busqueda);
             getDatos(url);
         });
+
+        // Mostrar los datos del link clickeado en el modal
+        $('#contenido').on('click', function(e) {
+            if (e.target != this) { // hice click en un link
+                $(".modal-title").html(e.target.dataset.name);
+                $("#direccion").html(e.target.dataset.dir);
+                $("#telefono").html(e.target.dataset.tel);
+            }
+        });
+
+        // Google Maps API
+        function initMap() {
+            // Opciones del mapa
+            let options = {
+                zoom: 8,
+                center: { // Centrar en Campana
+                    lat: -34.1687,
+                    lng: -58.9591
+                }
+            }
+
+            // Inicializar el mapa con las opciones anteriores
+            let map = new google.maps.Map(document.getElementById("map"), options);
+
+            // Listener de clicks en el div de id="contenido"
+            google.maps.event.addDomListener(document.querySelector("#contenido"), "click", function(e) {
+                // Remover marker previo
+                if (marker && marker.setMap) {
+                    marker.setMap(null);
+                }
+
+                marker = new google.maps.Marker({
+                    position: { // coordenadas del link clickeado
+                        lat: parseFloat(e.target.dataset.lat),
+                        lng: parseFloat(e.target.dataset.lng)
+                    },
+                    map: map
+                });
+            });
+        }
 
     </script>
 </body>
