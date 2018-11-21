@@ -16,15 +16,17 @@
         <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/templatemo-style.css">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
     </head>
 
 <body>
- 
     <div class="wrap">
         <header id="header">
             <div class="container">
@@ -43,7 +45,58 @@
                                         <li><a href="#">Más buscado 3</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Registrarse</a></li>
+                                <li><a class="scrollTo" data-scrollTo="contact" href="#">Contactanos</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#login-modall">Registrarse</a></li>
+                                <div class="modal fade" id="login-modall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="loginmodall-containerr">
+                                             <h1 style="color:white;">Registrate</h1><br>
+                                               <form class="form-horizontal" method="post" action="#">
+                                                    <div class="form-group">
+                                                        <label for="email" style="color:white;" class="cols-sm-2 control-label">Tu Email</label>
+                                                        <div class="cols-sm-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                                <input type="text" class="form-control" name="email" id="email"  placeholder="Ingresa tu email"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="username" style="color:white;" class="cols-sm-2 control-label">Cuenta</label>
+                                                        <div class="cols-sm-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                                <input type="text" class="form-control" name="username" id="username"  placeholder="Ingresa tu nombre de cuenta"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="password" style="color:white;" class="cols-sm-2 control-label">Contraseña</label>
+                                                        <div class="cols-sm-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                                <input type="password" class="form-control" name="password" id="password"  placeholder="Ingresa tu contraseña"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="confirm" style="color:white;" class="cols-sm-2 control-label">Confirmar Contraseña</label>
+                                                        <div class="cols-sm-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                                <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirma tu contraseña"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <button type="button" class="btn btn-primary btn-lg btn-block login-button">Registrarse</button>
+                                                    </div>
+                                                    <div class="login-register">
+                                                        <a href="#" data-toggle="modal" data-target="#login-modal" style="color:#4a93e5;" >Login</a>
+                                                     </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
                                 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                                     <div class="modal-dialog">
@@ -52,16 +105,15 @@
                                                 <form>
                                                     <input type="text" name="user" placeholder="Cuenta">
                                                     <input type="password" name="pass" placeholder="Contraseña">
-                                                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                                                    <input type="submit" name="login" class="btn btn-primary" value="Login">
                                                 </form>
                                                 <div class="login-help">
                                                     <p></p>
-                                                    <a style="color:#4a93e5;" href="#">Registrarse</a> -  <a style="color:#4a93e5;" href="#">Olvide mi contraseña</a>
+                                                    <a style="color:#4a93e5;" href="#" data-toggle="modal" data-target="#login-modall" >Registrarse</a> -  <a style="color:#4a93e5;" href="#">Olvide mi contraseña</a>
                                                 </div>
                                         </div>
                                     </div>
                                 </div>
-                                <li><a href="#">Contactanos</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -69,9 +121,7 @@
             </div>
         </header>
     </div>
-      
-
-    
+          
     <section class="banner" id="top">
         <div class="container">
             <div class="row">
@@ -442,7 +492,6 @@
         </div>
     </section>
 
-    
     <section class="featured-places" id="blog">
         <div class="container">
             <div class="row" id="queries">
@@ -453,17 +502,15 @@
         </div>
     </section>
     
-
-
     <section class="popular-places" id="popular">
         <div class="container">
            <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211116.7233294277!2d-59.09607631852324!3d-34.23070830131898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb723060430bad%3A0xaa31c9f685c849bf!2sCampana%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1542695152388" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
-            
-        </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211116.7233294277!2d-59.09607631852324!3d-34.23070830131898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb723060430bad%3A0xaa31c9f685c849bf!2sCampana%2C+Buenos+Aires!5e0!3m2!1ses-419!2sar!4v1542695152388" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>  
+            </div>
         </div>
     </section>
 
+    <section class="contact" id="contact">
     <footer>
         <div class="container">
             <div class="row">
@@ -492,11 +539,9 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <ul>
-                                    
-                                    <li><a href="#"><i class="fa fa-stop"></i>Registrarse</a></li>
-                                    <li><a href="#"><i class="fa fa-stop"></i>Login</a></li>
-                                    
+                                <ul>   
+                                    <li><a href="#" data-toggle="modal" data-target="#login-modall"><i class="fa fa-stop"></i>Registrarse</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-stop"></i>Login</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
@@ -514,67 +559,67 @@
                         </div>
                         <p>Alumnos de la Facultad Regional Delta</p>
                         <ul>
-                            <li><span>Telefono:</span><a href="#">3489-050550</a></li>
+                            <li><span>Teléfono:</span><a href="#">3489-050550</a></li>
                             <li><span>Email:</span><a href="#">marnu@company.ar</a></li>
                             <p></p>
                             <li>
                                 <!-- Modal button -->
                                 <button id="modBtn" class="modal-btn">Contactanos</button>
                                 <div id="modal" class="modal">
-                  <!-- Modal Content -->
-                  <div class="modal-content">
-                    <div class="close fa fa-close"></div>
-                    <div class="row">
-                        <div class="col-md-8"> 
-                            <div class="left-content">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="section-heading">
-                                            <span>Contactanos</span>
-                                            <h2>Dinos tu opinión</h2>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Tu nombre..." required="">
-                                      </fieldset>
-                                    </div>
-                                     <div class="col-md-6">
-                                      <fieldset>
-                                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Asunto..." required="">
-                                      </fieldset>
-                                    </div>
-                                    <div class="col-md-12">
-                                      <fieldset>
-                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tu mensaje..." required=""></textarea>
-                                      </fieldset>
-                                    </div>
-                                    <div class="col-md-12">
-                                      <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Enviar mensaje</button>
-                                      </fieldset>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="right-content">
-                                <div class="row">
-                                    <div class="content">                                          
-                                            <div class="section-heading">
-                                                <h2>Marnu</h2>
+                                  <!-- Modal Content -->
+                                  <div class="modal-content">
+                                    <div class="close fa fa-close"></div>
+                                    <div class="row">
+                                        <div class="col-md-8"> 
+                                            <div class="left-content">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="section-heading">
+                                                            <span>Contactanos</span>
+                                                            <h2>Dinos tu opinión</h2>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                      <fieldset>
+                                                        <input name="name" type="text" class="form-control" id="name" placeholder="Tu nombre..." required="">
+                                                      </fieldset>
+                                                    </div>
+                                                     <div class="col-md-6">
+                                                      <fieldset>
+                                                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Asunto..." required="">
+                                                      </fieldset>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                      <fieldset>
+                                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tu mensaje..." required=""></textarea>
+                                                      </fieldset>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                      <fieldset>
+                                                        <button type="submit" id="form-submit" class="btn">Enviar mensaje</button>
+                                                      </fieldset>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p>Somos un metabuscador que te simplifica la vida.</p>
-                                            <ul>
-                                                <li><span>Phone:</span><a href="#">3489-0500550</a></li>
-                                                <li><span>Email:</span><a href="#">marnu@company.ar</a></li>
-                                            </ul>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
+                                        <div class="col-md-4">
+                                            <div class="right-content">
+                                                <div class="row">
+                                                    <div class="content">                                          
+                                                            <div class="section-heading">
+                                                                <h2>Marnu</h2>
+                                                            </div>
+                                                            <p>Somos un metabuscador que te simplifica la vida.</p>
+                                                            <ul>
+                                                                <li><span>Teléfono:</span><a href="#">3489-0500550</a></li>
+                                                                <li><span>Email:</span><a href="#">marnu@company.ar</a></li>
+                                                            </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                 </div> 
                             </li>
                         </ul>
                     </div>
@@ -582,6 +627,7 @@
             </div>
         </div>
     </footer>
+    </section>
 
     <div class="sub-footer">
         <p>Copyright &copy; 2018 Diseño de Sistemas FRD - Design: <a >Pérez Leonardi Mariángeles, Ulmete Nicolás</a></p>
@@ -597,6 +643,7 @@
     <script src="js/main.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 
     <!-- Renderizar lo más buscado -->
     <script src="https://cse.google.com/query_renderer.js"></script>
