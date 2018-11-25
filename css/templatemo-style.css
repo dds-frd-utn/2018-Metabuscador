@@ -35,7 +35,7 @@ section {
 
 .section-heading {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .section-heading span {
@@ -48,7 +48,7 @@ section {
 .section-heading h2 {
   margin-bottom: 0px;
   margin-top: 14px;
-  font-size: 23px;
+  font-size: 40px;
   font-weight: 600;
   color: #232323;
   letter-spacing: 0.5px;
@@ -1324,4 +1324,13 @@ section#contact {
 #map {
   height: 300px;
   margin-top: 20px;
+}
+
+.nodisplay {
+  display: none;
+}
+
+#az,
+#za {
+  font-size: 18px;
 }

@@ -22,6 +22,7 @@
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -34,7 +35,7 @@
                     <div class="col-md-12">
                         <button id="primary-nav-button" type="button">Menu</button>
                         <a href="index.html"><div class="logo">
-                            <img src="img/logo.png" alt="Venue Logo">
+                            <img src="img/logo.jpeg" alt="Marnu Logo">
                         </div></a>
                         <nav id="primary-nav" class="dropdown cf">
                             <ul class="dropdown menu">
@@ -168,9 +169,24 @@
 
     <!-- Resultados de la búsqueda -->
     <div id="contenido">
-        <!-- <a href="#" class="testlink" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="testname1" data-dir="testdir1" data-tel="testtel1" data-lat="-34.1687" data-lng="-58.9591">Test Link</a>
-        <a href="#" class="testlink" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="testname2" data-dir="testdir2" data-tel="testtel2" data-lat="" data-lng="">Test Link 2</a>
-        <a href="#" class="testlink" type="button" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="testname3" data-dir="testdir3" data-tel="testtel3" data-lat="" data-lng="">Test Link 3</a> -->
+            <div class="row nodisplay">
+                    <div class="col-xs-4 col-xs-offset-4">
+                        <div class="dropdown">
+                            <button class="btn btn-block dropdown-toggle modal-btn" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Ordenar <span class="caret"></span>
+            
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenu1">
+                                <li><a href="#" id="az">A-Z</a></li>
+                                <li><a href="#" id="za">Z-A</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row nodisplay">
+                    <button class="btn modal-btn" id="remover">Ocultar búsqueda</button>
+                </div>
+                <div class="section-heading nodisplay"><h2>Resultados de la búsqueda</h2></div>
+                <div id="links-container"></div>
     </div>
 
     <!-- Modal -->
@@ -710,11 +726,12 @@
         let item;
         let link;
         let marker;
+        let linksContainer = document.querySelector("#links-container");
 
         // Manipulamos los datos obtenidos de la búsqueda
         function hndlr(response) {
-            $(contenido).html(""); // remover el contenido de la búsqueda anterior
-            $(contenido).html("<h2>Resultados de la búsqueda</h2>");
+            $("#links-container").html("");
+            $(".nodisplay").css("display", "block");
 
             // Guardar los datos de cada resultado en variables
             for (var i = 0; i < response.items.length; i++) {
@@ -733,14 +750,15 @@
 
                 // Cada resultado es un link
                 link = `
-                    <a href="#" class="result" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="${nombre}" data-dir="${direccion}" data-tel="${telefono}" data-lat="${latitud}" data-lng="${longitud}">
-                        ${nombre}
-                    </a>
-                    </br>
+                    <div class="result-container">
+                        <a href="#" class="result" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" data-name="${nombre}" data-dir="${direccion}" data-tel="${telefono}" data-lat="${latitud}" data-lng="${longitud}">
+                            ${nombre}
+                        </a>
+                    </div>
                 `;
 
-                // Agregar al div de id="contenido" cada link
-                $(contenido).append(link);
+                // Agregar cada link
+                $("#links-container").append(link);
             }
         }
 
@@ -809,7 +827,7 @@
         function initMap() {
             // Opciones del mapa
             let options = {
-                zoom: 8,
+                zoom: 15,
                 center: { // Centrar en Campana
                     lat: -34.1687,
                     lng: -58.9591
@@ -834,6 +852,53 @@
                     map: map
                 });
             });
+        }
+
+        // Ordenar resultados de la búsqueda (A-Z o Z-A)
+
+        $("#az").click(function(e) {
+            e.preventDefault();
+            sortAZ(".result-container");
+        });
+
+        $("#za").click(function(e) {
+            e.preventDefault();
+            sortZA(".result-container");
+        })
+
+        // Ordenar A-Z
+        function sortAZ(s) {
+            $(s).sort(function(a, b) {
+                if (a.textContent < b.textContent) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }).appendTo(linksContainer);
+        }
+
+        // Ordenar Z-A
+        function sortZA(s) {
+            $(s).sort(function(a, b) {
+                if (a.textContent < b.textContent) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }).appendTo(linksContainer);
+        }
+
+        // Ocultar resultados de la búsqueda
+
+        let botonOcultar = document.querySelector("#remover");
+
+        botonOcultar.addEventListener("click", removeElementos);
+
+        function removeElementos() {
+            while (linksContainer.firstChild) {
+                linksContainer.removeChild(linksContainer.firstChild);
+            }
+            $(".nodisplay").css("display", "none");
         }
 
     </script>
